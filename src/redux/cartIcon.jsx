@@ -31,7 +31,7 @@ let cartSlice = createSlice(
             },
             DecQuantity : (state,action)=>{
                 let id = action.payload
-                let item = state.find(cartItem => cartItem.id == id)
+                let item = state.find(cartItem => cartItem.id === id)
                 if(item && item.quantity > 1){
                     item.quantity-=1
                 }

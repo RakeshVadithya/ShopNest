@@ -1,4 +1,4 @@
-import watch1 from '../Assets/watch1.jpg'
+// import watch1 from '../Assets/watch1.jpg'
 import carousel2 from '../Assets/carousel2.jpg'
 import watch3 from '../Assets/watch3.jpg'
 import watch4 from '../Assets/watch4.jpg'
