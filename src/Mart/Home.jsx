@@ -14,8 +14,6 @@ import { ADDTOCART } from "../redux/cartSlice";
 import { ADDCART } from "../redux/cartIcon";
 import {Alerts} from './Alerts'
 import { useParams } from "react-router-dom";
-
-
 import { Footer } from "./Footer";
 
 
