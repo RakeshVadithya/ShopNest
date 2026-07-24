@@ -14,8 +14,8 @@ import { ADDTOCART } from "../redux/cartSlice";
 import { ADDCART } from "../redux/cartIcon";
 import {Alerts} from './Alerts'
 import { useParams } from "react-router-dom";
-import { REMOVEFROMCART } from "../redux/cartSlice";
-import { useSelector } from "react-redux";
+
+
 import { Footer } from "./Footer";
 
 
@@ -60,9 +60,7 @@ export const Home = () => {
     }, 3000);
   };
   
-let handleRemoveCart = (product) => {
-  dispatch(REMOVEFROMCART(product.id));
-};
+
   return (
     <div>
       <Header />
