@@ -11,7 +11,6 @@ import { ADDCART } from '../redux/cartIcon';
 import { Alerts } from './Alerts';
 import { ADDTOCART } from '../redux/cartSlice';
 import { useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { Footer } from './Footer';
 import { setProductDetails } from '../redux/productSlice';
