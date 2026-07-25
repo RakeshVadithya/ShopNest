@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ca67ef22.css",
-    "main.js": "/static/js/main.8c7a4bf7.js",
+    "main.js": "/static/js/main.faa348cc.js",
     "static/media/bestsales5.jpg": "/static/media/bestsales5.0a52e133f120b069c8f0.jpg",
     "static/media/watch4.jpg": "/static/media/watch4.333a4734dcd0dfb17568.jpg",
     "static/media/bestsales7.jpg": "/static/media/bestsales7.25a8def54ac6f84b0ce4.jpg",
@@ -37,10 +37,10 @@
     "static/media/table.jpg": "/static/media/table.1f00f5e2ec686016a3c4.jpg",
     "index.html": "/index.html",
     "main.ca67ef22.css.map": "/static/css/main.ca67ef22.css.map",
-    "main.8c7a4bf7.js.map": "/static/js/main.8c7a4bf7.js.map"
+    "main.faa348cc.js.map": "/static/js/main.faa348cc.js.map"
   },
   "entrypoints": [
     "static/css/main.ca67ef22.css",
-    "static/js/main.8c7a4bf7.js"
+    "static/js/main.faa348cc.js"
   ]
 }
