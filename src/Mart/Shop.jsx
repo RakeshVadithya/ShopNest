@@ -30,14 +30,19 @@ let [selectedCategory, setSelectedCategory] = useState(id || "sofa"); // ✅ Thi
       setAlertMessage("");  
     }, 3000);
   };
-  let handleAddCart = (product) => {
-    dispatch(ADDCART({ ...product, quantity: 1 }));
-    setAlertMessage("Product is added to the Cart");
-    
-    
-    setTimeout(() => {
-      setAlertMessage("");  
-    }, 3000);
+
+const handleAddToCart = (product) => {
+  dispatch(ADDTOCART({ ...product, quantity: 1 }));
+  dispatch(ADDCART({ ...product, quantity: 1 }));
+
+  setAlertMessage("Product is added to the Cart");
+
+  setTimeout(() => {
+    setAlertMessage("");
+  }, 3000);
+};
+
+
   };
   let [filteredProducts, setFilteredProducts] = useState([]);
   let [allProducts, setAllProducts] = useState([]);
@@ -47,21 +52,27 @@ let [selectedCategory, setSelectedCategory] = useState(id || "sofa"); // ✅ Thi
 
   let categories = ["sofa", "chair", "mobile", "wireless","watch","none"];
 
- useEffect(() => {
-  const products = [...BigDiscount, ...NewArrivals, ...BestSales, ...Watch];
+useEffect(() => {
+  const products = [
+    ...BigDiscount,
+    ...NewArrivals,
+    ...BestSales,
+    ...Watch
+  ];
+
   setAllProducts(products);
 
   const initialCategory = id || "sofa";
+
   setSelectedCategory(initialCategory);
 
   const filtered = products.filter(
-    (product) =>
-      product.category === initialCategory &&
-      product.productName.toLowerCase().includes(searchTerm.toLowerCase())
+    (product) => product.category === initialCategory
   );
 
   setFilteredProducts(filtered);
-}, []); // `id` as a dependency
+
+}, [id]);
 
   
   let handleCategoryChange = (category) => {
@@ -216,20 +227,20 @@ let [selectedCategory, setSelectedCategory] = useState(id || "sofa"); // ✅ Thi
             </div>
           </div>
         </Link>
-        <button
-          className="btn btn-light btn-outline-primary d-flex align-items-center justify-content-center rounded-circle"
-          style={{
-            position: "absolute",
-            bottom: "10px",
-            right: "10px",
-            width: "50px",
-            height: "50px",
-            zIndex: 1,
-          }}
-          onClick={() => {handleAddCart(product);handleAddToCart(product) }}
-        >
-          <span style={{ fontSize: "40px", marginBottom: "5px" }}>+</span>
-        </button>
+       <button
+  className="btn btn-light btn-outline-primary d-flex align-items-center justify-content-center rounded-circle"
+  style={{
+    position: "absolute",
+    bottom: "10px",
+    right: "10px",
+    width: "50px",
+    height: "50px",
+    zIndex: 1,
+  }}
+  onClick={() => handleAddToCart(product)}
+>
+  <span style={{ fontSize: "40px", marginBottom: "5px" }}>+</span>
+</button>
       </div>
     </div>
   ))}
