@@ -61,7 +61,7 @@ let [selectedCategory, setSelectedCategory] = useState(id || "sofa"); // ✅ Thi
   );
 
   setFilteredProducts(filtered);
-}, [id]); // `id` as a dependency
+}, []); // `id` as a dependency
 
   
   let handleCategoryChange = (category) => {
