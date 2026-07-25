@@ -17,8 +17,7 @@ import { Footer } from './Footer';
 import { setProductDetails } from '../redux/productSlice';
 export const ProductDetails = () => {
   
-  let {id}= useParams()
-  console.log(id)
+
   
   let dispatch = useDispatch()
   let [alertMessage, setAlertMessage] = useState("");
